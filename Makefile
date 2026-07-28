@@ -32,3 +32,7 @@ coverage-html: coverage
 clean:
 	-rm -rf bin/
 	-find -type d -name '.cache' -exec rm -r {} +
+
+.PHONY: lint
+lint:
+	golangci-lint run ./...
